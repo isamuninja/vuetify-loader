@@ -194,6 +194,8 @@ export function stylesPlugin (options: Options): Plugin {
         }
       } else if (source.startsWith('/plugin-vuetify:')) {
         return '\0' + source.slice(1)
+      } else if (source.startsWith('/�plugin-vuetify:')) {
+        return '\0' + source.slice(2);
       } else if (source.startsWith('/@id/__x00__plugin-vuetify:')) {
         return '\0' + source.slice(12)
       }
